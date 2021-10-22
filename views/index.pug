@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Palindrome Checker
+  form(method="POST" action="/")
+    label(for="userText") Enter your text here:
+    br
+    input(type="text" id="userText" name="userText")
+    br
+    br
+    button(type="submit") Submit
+    if message
+      p=message
+    br
+    label(for="userText") Ex. 'TacoCat' is a palindrome because if you spell it backwards it spells 'TacoCat'
+    br
+    br
+    label(for="userText") Ex. 'Hello' is not a palindrome becuase if you spell it backwards it doesn't spell 'Hello'
